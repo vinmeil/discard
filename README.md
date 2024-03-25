@@ -136,6 +136,7 @@ How to open a pull request:
 2. Go to the `Pull requests` tab at the top.
 3. Click on `New pull request`.
 4. Set the base to `main` and compare to `your branch`
+
 **Image for reference:**
 ![alt text](mdassets/primage.png)
 5. Make sure it says `Able to merge`.
