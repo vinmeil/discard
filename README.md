@@ -50,9 +50,97 @@ docker compose up
 docker compose watch
 ```
 
-**NOTE: If you are getting an error regarding permissions, run VSCode as administrator and see if that works.*
+**NOTE: For windows, if you are getting an error regarding permissions, run VSCode as administrator and see if that works.*
 
-4. Wait for docker to finish loading. Once it is done loading, head over to [http://localhost:3000](http://localhost:3000) to see the project.
+4. Wait for docker to finish loading. Once it is done loading, head over to [http://localhost:3000](http://localhost:3000) to view the project.
+
+## Git & Github Workflow
+
+### Pulling code from main branch
+
+If you have made changes to your branch but your branch is behind main (due to someone else's branch being merged to main), do the following:
+
+1. Stash your changes:
+```
+git stash
+```
+
+2. Switch to the main branch:
+```
+git checkout main
+```
+
+3. Pull the latest changes from the main branch:
+```
+git pull origin main
+```
+
+4. Switch back to your own branch:
+```
+git checkout <name of branch you were working on>
+```
+
+5. Merge the changes from main with your branch:
+```
+git merge main
+```
+
+6. Add back the changes you've previously stashed into you branch:
+```
+git stash pop
+```
+
+7. Resolve any conflicts if there are any.
+
+### Pushing code to github
+
+When working on a new feature or page, make sure to work in a branch that is not the `main` branch. To do this, in your terminal run:
+```
+git checkout -b <your new branch name>
+```
+
+To switch between branches, in your terminal run:
+```
+git checkout <branch you want to switch to>
+```
+
+To push your changes to github, do the following:
+1. Make sure you are in the correct directory, and add the files that you want to be uploaded to github:
+```
+git add .
+```
+or
+```
+git add -A
+```
+
+2. Commit your changes and add a meaningful message:
+```
+git commit -m "<enter your message here, e.g. create navbar component>"
+```
+
+3. Push the changes onto your branch in github:
+```
+git push origin <your current branch name>
+```
+
+4. If your branch is not up to date with main, make sure to pull changes from main before pushing your changes or opening a pull request.
+
+### Opening a pull request
+
+Open a pull request when you think you're done with your feature. It allows people to review your code to make sure everything is alright before merging it to the main branch.
+
+How to open a pull request:
+
+1. Go to the github repository's main page.
+2. Go to the `Pull requests` tab at the top.
+3. Click on `New pull request`.
+4. Set the base to `main` and compare to `your branch`
+**Image for reference:**
+![alt text](mdassets/primage.png)
+5. Make sure it says `Able to merge`.
+6. Click on `Create pull request`.
+7. Tell someone that you've made a pull request so it can be reviewed.
 
 ## License
 
