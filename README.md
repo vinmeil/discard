@@ -54,6 +54,19 @@ docker compose watch
 
 4. Wait for docker to finish loading. Once it is done loading, head over to [http://localhost:3000](http://localhost:3000) to view the project.
 
+### Dealing with VSCode errors
+
+If you are having an issue where the whole file is giving an error,
+
+![alt text](mdassets/vscodeErrorimage.png)
+
+Run the following command:
+```
+npm install
+```
+
+Note that even though you are encountering errors, the website will still run fine on [localhost](http://localhost:3000) as it runs using docker, not on your own machine. Although this may be the case, it is recommended that you run `npm install` to get rid of the errors so that you can see where the actual errors are.
+
 ## Git & Github Workflow
 
 ### Pulling code from main branch
