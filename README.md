@@ -148,12 +148,12 @@ How to open a pull request:
 1. Go to the github repository's main page.
 2. Go to the `Pull requests` tab at the top.
 3. Click on `New pull request`.
-4. Set the base to `main` and compare to `your branch`
+4. Set the base to `main` and compare to `your branch`.
 
 **Image for reference:**
 ![alt text](mdassets/primage.png)
-5. Make sure it says `Able to merge`.
-6. Click on `Create pull request`.
+5. Make sure it says `Able to merge`.\
+6. Click on `Create pull request`.\
 7. Tell someone that you've made a pull request so it can be reviewed.
 
 ## License
@@ -162,7 +162,8 @@ This project is not licensed and is intended for educational purposes. Please do
 
 ## Authors
 - Vincent Wesley Liem - [vinmeil](https://github.com/vinmeil)
-- Daven Tan - [Skooyo](https://github.com/Skooyo)
+- Daven Japhis Tan - [Skooyo](https://github.com/Skooyo)
+- Ryan Dyson Darmawan - [RyanDyson](https://github.com/RyanDyson)
 
 ## Acknowledgements
 - [Discord](https://discord.com/) - Serves as an inspiration to our project, including the UI/UX and idea of our project.

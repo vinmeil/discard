@@ -9,7 +9,7 @@ export default function RootLayout({children}: {children: ReactNode}) {
             <body>
                 <p>osdnoiadshonadosihnoiasdvvvvvvvvvvvvvvvv</p>
                 {children}
-          </body>
+            </body>
         </html>
     );
 }
