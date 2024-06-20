@@ -152,8 +152,8 @@ How to open a pull request:
 
 **Image for reference:**
 ![alt text](mdassets/primage.png)
-5. Make sure it says `Able to merge`.
-6. Click on `Create pull request`.
+5. Make sure it says `Able to merge`.\
+6. Click on `Create pull request`.\
 7. Tell someone that you've made a pull request so it can be reviewed.
 
 ## License
