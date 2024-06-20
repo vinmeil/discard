@@ -6,6 +6,7 @@ const inter = Inter({subsets: ['latin']});
 export default function Layout({children}: {children: ReactNode}) {
     return (
         <div className={inter.className}>
+            <p>osdnoiadshonadosihnoiasdvvvvvvvvvvvvvvvv</p>
             {children}
         </div>
     );
