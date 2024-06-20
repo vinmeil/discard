@@ -5,4 +5,4 @@ const nextConfig = {
     pageExtensions: ['ts', 'tsx'], // Include TypeScript files as pages
   }
   
-module.exports = {nextConfig}
+exports.nextConfig = nextConfig
