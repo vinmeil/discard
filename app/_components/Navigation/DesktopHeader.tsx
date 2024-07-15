@@ -1,7 +1,8 @@
 export const DesktopHeader = () => {
     return (
-        <div className="hidden md:block text-red-700">
-            DesktopHeader 
+        <div className="flex p-8 justify-between">
+            <div>Discard</div>
+            <div>Login</div>
         </div>
     )
 }
