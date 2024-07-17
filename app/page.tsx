@@ -1,9 +1,11 @@
+import { Display } from "./hero/Display";
+
 export default function Page() {
-    return (
-        <main>
-            <div>
-                <h1 className="bg-gray-900">This Will be the landing page</h1>
-            </div>
-        </main>
-    )
+  return (
+    <main>
+      <div className="px-12 md:px-8 py-4">
+        <Display />
+      </div>
+    </main>
+  );
 }
