@@ -51,7 +51,7 @@ export function NavigationMenu() {
         />
         <CustomHeading className="text-xl">Discard</CustomHeading>
       </div>
-      <div className="flex justify-evenly">
+      <div className="hidden md:flex justify-evenly">
         {navButtons.map((button, index) => (
           <NavButton key={index} {...button} />
         ))}
