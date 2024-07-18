@@ -1,4 +1,4 @@
-import { Display } from "./hero/Display";
+import { Display } from "./_components/hero/Display";
 
 export default function Page() {
   return (
