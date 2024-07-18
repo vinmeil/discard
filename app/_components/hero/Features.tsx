@@ -11,10 +11,10 @@ type featuresItemProps = {
 
 const FeaturesItem = ({ title, icon, label, image }: featuresItemProps) => {
   return (
-    <div className="flex flex-col rounded-md p-4 items-center justify-between h-[300px] w-[200px] border border-violet-50">
+    <div className="bg-gradient-to-b from-transparent to-ring flex flex-col rounded-md p-8 items-center justify-between h-[450px] w-[275px] border border-violet-50 border-opacity-70">
       {icon}
       <div className="text-center">
-        <CustomHeading className="text-lg font-bold text-white">
+        <CustomHeading className="text-2xl font-bold text-white">
           {title}
         </CustomHeading>
         <p className="text-white">{label}</p>
@@ -43,8 +43,9 @@ export function Features() {
   ];
 
   return (
-    <div className="flex justify-center align-middle px-14 py-12 bg-zinc-800 rounded-lg text-violet-50 mt-12">
-      <div className="flex w-min bg-zinc-900 rounded-md items-center justify-center gap-x-1">
+    <div className="flex justify-between align-middle px-14 py-12 bg-zinc-900 rounded-lg text-violet-50 mt-12 backdrop-blur-md bg-opacity-60">
+      <CustomHeading className="text-4xl flex items-center">Our Features</CustomHeading>
+      <div className="flex w-min bg-zinc-900 rounded-md items-center justify-center gap-x-1 p-1">
         {featuresList.map((feature, index) => (
           <FeaturesItem key={index} {...feature} />
         ))}
