@@ -15,8 +15,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${DMSans.className} bg-hero-desktop bg-zinc-900`}>
-        <Header />
-        {children}
+        <div className="bg-gradient-to-b from-violet-200 to-transparent to-60%">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -16,7 +16,7 @@ import Link from "next/link";
 
 export function LoginButton() {
   return (
-    <button className="h-full flex bg-purple-600 px-4 py-4 items-center justify-between gap-x-4 rounded-lg hover:bg-purple-400">
+    <button className="h-full flex bg-violet-600 px-4 py-4 items-center justify-between gap-x-4 rounded-lg hover:bg-violet-400 shadow-md">
       <FaRegUser size={16} className="text-2xl text-white" />
       <span className="text-white">Login</span>
     </button>
@@ -50,12 +50,12 @@ export function MobileLoginButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="h-full flex bg-purple-600 px-4 py-4 items-center justify-between gap-x-4 rounded-lg hover:bg-purple-400">
+        <button className="h-full flex bg-violet-600 px-4 py-4 items-center justify-between gap-x-4 rounded-lg hover:bg-violet-400 shadow-md">
           <IoMenu size={20} className="text-2xl text-white" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="relative w-screen px-4 py-2 bg-transparent border-none shadow-none">
-        <div className="p-4 rounded-sm bg-purple-600 shadow-md">
+        <div className="p-4 rounded-sm bg-violet-600 shadow-md">
           {navButtons.map((button, index) => (
             <Link href={button.href}>
               <DropdownMenuItem key={index} className="text-white gap-x-2">

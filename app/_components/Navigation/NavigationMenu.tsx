@@ -13,7 +13,7 @@ function NavButton({ text, href, isLastItem }: NavButtonProps) {
   return (
     <Link
       className={cn(
-        "rounded-sm px-3 py-1 hover:text-purple-400 transition active:bg-purple-600 active:text-white",
+        "rounded-sm px-3 py-1 hover:text-violet-400 transition active:bg-violet-600 active:text-white",
         isLastItem && "border-none"
       )}
       href={href}
@@ -41,7 +41,7 @@ export function NavigationMenu() {
   ];
 
   return (
-    <div className="w-full h-full bg-purple-50 flex justify-between px-4 py-3 items-center rounded-lg text-purple-600">
+    <div className="w-full h-full bg-violet-50 flex justify-between px-4 py-3 items-center rounded-lg text-violet-600 shadow-md">
       <div className="flex justify-between gap-2.5">
         <Image
           height={24}
