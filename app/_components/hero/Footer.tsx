@@ -1,5 +1,6 @@
 import { CustomHeading } from "@/components/ui/CustomHeading";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 type footerItemsProps = {
   heading: string;
@@ -60,7 +61,10 @@ export function Footer() {
           Contact Us
         </CustomHeading>
         <p>Get in touch with our team</p>
-        <Input type="email" placeholder="123@discard.net" className="dark" />
+        <div className="flex gap-x-2 w-full">
+          <Input type="email" placeholder="123@discard.net" className="dark" />
+          <Button>Send</Button>
+        </div>
         <p>&copy; 2021 Discard</p>
       </div>
     </footer>

@@ -25,10 +25,12 @@ export function Display() {
           Connect with Your Friends
         </CustomHeading>
         <Link href="#">
-          <button className="bg-violet-600 p-4 rounded-full flex gap-x-2 text-white items-center">
+          <button className="bg-violet-600 px-6 p-2 md:p-4 rounded-full flex gap-x-2 text-white items-center">
             <FiDownloadCloud size={36} className="pe-2" />
-            <div className="flex flex-col md:flex-row justify-end gap-x-2 items-end">
-              <CustomHeading className="text-xl">Download</CustomHeading>
+            <div className="flex flex-col md:flex-row justify-end gap-y-0 md:gap-x-2 items-end">
+              <CustomHeading className="text-lg md:text-xl">
+                Download
+              </CustomHeading>
               <span>for windows</span>
             </div>
           </button>

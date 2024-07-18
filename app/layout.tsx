@@ -14,7 +14,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${DMSans.className} bg-hero-desktop bg-zinc-900`}>
+      <body
+        className={`${DMSans.className} bg-hero-desktop bg-zinc-900 bg-no-repeat bg-cover`}
+      >
         <div className="bg-gradient-to-b from-violet-200 to-transparent to-60%">
           <Header />
           {children}
