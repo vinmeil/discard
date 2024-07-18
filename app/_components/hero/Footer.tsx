@@ -61,9 +61,20 @@ export function Footer() {
           Contact Us
         </CustomHeading>
         <p>Get in touch with our team</p>
-        <div className="flex gap-x-2 w-full">
-          <Input type="email" placeholder="123@discard.net" className="dark" />
-          <Button>Send</Button>
+        <div className="w-full flex flex-col gap-y-2">
+          <Input
+            type="text"
+            placeholder="Your concerns..."
+            className="light text-gray-900"
+          />
+          <div className="flex gap-x-2 w-full">
+            <Input
+              type="email"
+              placeholder="123@discard.net"
+              className="dark"
+            />
+            <Button>Send</Button>
+          </div>
         </div>
         <p>&copy; 2021 Discard</p>
       </div>

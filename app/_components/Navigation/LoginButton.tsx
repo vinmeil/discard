@@ -55,10 +55,10 @@ export function MobileLoginButton() {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="relative w-screen px-4 py-2 bg-transparent border-none shadow-none">
-        <div className="p-4 rounded-sm bg-violet-600 shadow-md">
+        <div className="p-4 rounded-md bg-violet-600 shadow-md">
           {navButtons.map((button, index) => (
-            <Link href={button.href}>
-              <DropdownMenuItem key={index} className="text-white gap-x-2">
+            <Link key={index} href={button.href}>
+              <DropdownMenuItem className="text-white gap-x-2">
                 {button.icon}
                 {button.text}
               </DropdownMenuItem>
