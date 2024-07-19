@@ -3,8 +3,6 @@
 import { CustomHeading } from "@/components/custom/CustomHeading";
 import { IoCompassOutline, IoLockClosed } from "react-icons/io5";
 import { TbMessageCircle2 } from "react-icons/tb";
-import { useMousePosition } from "@/lib/_hooks/useMousePosition";
-import { useMemo } from "react";
 
 import { useRef, useEffect } from "react";
 
@@ -17,6 +15,8 @@ type featuresItemProps = {
 };
 
 const FeaturesItem = ({ title, icon, label, image }: featuresItemProps) => {
+  const imageSrc = image ?? { background: `bg-url(${image})` };
+
   return (
     <div className="card lg:h-[450px] w-full lg:w-[225px]">
       <div className="flex flex-col lg:h-[448px] w-full lg:w-[223px] justify-between items-center px-14 py-12 bg-zinc-900 text-violet-50 card-content h-full">
