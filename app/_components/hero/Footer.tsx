@@ -1,4 +1,4 @@
-import { CustomHeading } from "@/components/ui/CustomHeading";
+import { CustomHeading } from "@/components/custom/CustomHeading";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 

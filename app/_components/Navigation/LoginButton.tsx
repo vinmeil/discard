@@ -1,4 +1,9 @@
+"use client";
+
 import { FaRegUser } from "react-icons/fa6";
+import { useState } from "react";
+import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+
 import {
   IoMenu,
   IoDownloadOutline,
@@ -47,11 +52,24 @@ export function MobileLoginButton() {
     },
   ];
 
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
-    <DropdownMenu>
+    <DropdownMenu
+      onOpenChange={() => {
+        setIsOpen(!isOpen);
+      }}
+    >
       <DropdownMenuTrigger asChild>
         <button className="h-full flex bg-violet-600 px-4 py-4 items-center justify-between gap-x-4 rounded-lg hover:bg-violet-400 shadow-md">
-          <IoMenu size={20} className="text-2xl text-white" />
+          {isOpen ? (
+            <MdOutlineKeyboardDoubleArrowDown
+              size={20}
+              className="text-2xl text-white"
+            />
+          ) : (
+            <IoMenu size={20} className="text-2xl text-white" />
+          )}
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="relative w-screen px-4 py-2 bg-transparent border-none shadow-none">

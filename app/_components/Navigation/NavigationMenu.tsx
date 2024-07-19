@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { CustomHeading } from "@/components/ui/CustomHeading";
+import { CustomHeading } from "@/components/custom/CustomHeading";
 import Image from "next/image";
 
 type NavButtonProps = {
