@@ -3,6 +3,7 @@
 import { CustomHeading } from "@/components/custom/CustomHeading";
 import { IoCompassOutline, IoLockClosed } from "react-icons/io5";
 import { TbMessageCircle2 } from "react-icons/tb";
+import { CustomCard } from "@/components/custom/CustomCard";
 
 import { useRef, useEffect } from "react";
 
@@ -18,8 +19,8 @@ const FeaturesItem = ({ title, icon, label, image }: featuresItemProps) => {
   const imageSrc = image ?? { background: `bg-url(${image})` };
 
   return (
-    <div className="card lg:h-[450px] w-full lg:w-[225px]">
-      <div className="flex flex-col lg:h-[448px] w-full lg:w-[223px] justify-between items-center px-14 py-12 bg-zinc-900 text-violet-50 card-content h-full">
+    <div className="card lg:h-[450px] w-full lg:w-[225px] ">
+      <div className="flex flex-col  justify-between items-center px-14 py-12 bg-zinc-900 text-violet-50 card-content">
         {icon}
         <div className="md:text-center">
           <CustomHeading className="text-2xl font-bold text-white">
@@ -81,13 +82,13 @@ export function Features() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row justify-between align-middle px-14 py-12 bg-zinc-900 md:rounded-xl text-violet-50 mt-12 backdrop-blur-md bg-opacity-60 rounded-none">
-      <CustomHeading className="w-full md:flex md:items-center text-4xl break-words text-center md:text-left pb-8">
+    <div className="flex flex-col lg:flex-row justify-center lg:justify-between align-middle px-14 py-12 bg-zinc-900 md:rounded-xl text-violet-50 mt-12 backdrop-blur-md bg-opacity-60 rounded-none">
+      <CustomHeading className="w-full flex justify-center lg:justify-normal md:items-center text-4xl break-words text-center lg:text-left pb-8">
         Our Features
       </CustomHeading>
       <div
         ref={cardsRef}
-        className="cards flex flex-col lg:flex-row w-full bg-zinc-900 rounded-xl items-center justify-center gap-1 p-1"
+        className="cards flex flex-col md:flex-row w-full bg-zinc-900 rounded-xl items-center justify-center gap-1 p-1"
       >
         {featuresList.map((feature, index) => (
           <FeaturesItem key={index} {...feature} />
