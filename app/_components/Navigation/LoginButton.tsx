@@ -17,47 +17,19 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
-import {
-  DialogPortal,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-  DialogOverlay,
-  Dialog,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Dialog } from "@/components/ui/dialog";
+import { SignInDialog } from "./SignInDialog";
 import Link from "next/link";
-import { CustomHeading } from "@/components/custom/CustomHeading";
 
 export function LoginButton() {
-  return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <button className="h-full flex bg-violet-600 px-4 py-4 items-center justify-between gap-x-4 rounded-lg hover:bg-violet-400 shadow-md">
-          <FaRegUser size={16} className="text-2xl text-white" />
-          <span className="text-white">Login</span>
-        </button>
-      </DialogTrigger>
-      <DialogPortal>
-        <DialogOverlay className="backdrop-blur-sm" />
-        <DialogContent className="bg-zinc-900 text-white border-violet-600/20 p-0 m-0">
-          <div className="m-8">
-            <DialogHeader>
-              <CustomHeading className="text-white text-center text-2xl">
-                Sign In
-              </CustomHeading>
-            </DialogHeader>
-          </div>
-          <div className="flex p-4 bg-violet-600 justify-center items-center w-full text-center">
-            Secured By Clerk
-          </div>
-        </DialogContent>
-      </DialogPortal>
-    </Dialog>
+  const Button = (
+    <button className="h-full flex bg-violet-600 px-4 py-4 items-center justify-between gap-x-4 rounded-lg hover:bg-violet-400 shadow-md">
+      <FaRegUser size={16} className="text-2xl text-white" />
+      <span className="text-white">Login</span>
+    </button>
   );
+
+  return <SignInDialog DialogTrigger={Button} />;
 }
 
 export function MobileLoginButton() {
@@ -86,7 +58,7 @@ export function MobileLoginButton() {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  return (
+  const dropDown = (
     <DropdownMenu
       onOpenChange={() => {
         setIsOpen(!isOpen);
@@ -118,4 +90,6 @@ export function MobileLoginButton() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
+
+  return <SignInDialog DropDownFix={dropDown} />;
 }
