@@ -1,15 +1,27 @@
-import { Inter } from "next/font/google";
+import { type Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 import { type ReactNode } from "react";
+import { Header } from "./_components/Header";
+import "./globals.css";
 
-const inter = Inter({subsets: ['latin']});
+const DMSans = DM_Sans({ subsets: ["latin"] });
 
-export default function RootLayout({children}: {children: ReactNode}) {
-    return (
-        <html className={inter.className}>
-            <body>
-                <p>osdnoiadshonadosihnoiasdvvvvvvvvvvvvvvvv</p>
-                {children}
-            </body>
-        </html>
-    );
+export const metadata: Metadata = {
+  title: "Discard",
+  description: "Discard is a voice and chatting platform",
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <body
+        className={`${DMSans.className} bg-hero-desktop bg-zinc-900 bg-no-repeat bg-cover`}
+      >
+        <div className="bg-gradient-to-b from-violet-200 to-transparent to-60%">
+          <Header />
+          {children}
+        </div>
+      </body>
+    </html>
+  );
 }
